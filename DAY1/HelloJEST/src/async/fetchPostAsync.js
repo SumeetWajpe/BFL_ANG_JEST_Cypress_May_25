@@ -6,4 +6,9 @@ const fetchPost = async id => {
   );
   return response.data;
 };
-module.exports = { fetchPost };
+
+const fetchPostToReturnAPromise = id => {
+  return axios.get(`https://jsonplaceholder.typicode.com/posts/${id}`);
+};
+
+module.exports = { fetchPost, fetchPostToReturnAPromise };
