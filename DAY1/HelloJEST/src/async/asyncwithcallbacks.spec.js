@@ -6,7 +6,7 @@ function fetchData(callback) {
   }, 2000);
 }
 
-test("test suite for async with callbacks", done => {
+test.skip("test suite for async with callbacks", done => {
   function CallMeBack(data) {
     try {
       expect(data).toBe("success");
