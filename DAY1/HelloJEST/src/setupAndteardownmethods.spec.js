@@ -1,4 +1,4 @@
-fdescribe("a suite for using setup and teardown methods", () => {
+xdescribe("a suite for using setup and teardown methods", () => {
   beforeAll(() => {
     console.log("This runs once before all tests in this suite");
   });
@@ -18,7 +18,17 @@ fdescribe("a suite for using setup and teardown methods", () => {
   });
   it("sample test2", () => {
     console.log("Test 2 is running");
-
     expect(true).toBe(true);
+  });
+});
+
+describe("a suite for using setup and teardown methods with async", () => {
+  it("tests for length of cars", () => {
+    let cars = ["BMW", "Audi", "Mercedes"];
+    expect(cars.length).toBe(3);
+  });
+  it("tests for BMW as an item in  cars", () => {
+    let cars = ["BMW", "Audi", "Mercedes"];
+    expect(cars).toContain("BMW");
   });
 });
