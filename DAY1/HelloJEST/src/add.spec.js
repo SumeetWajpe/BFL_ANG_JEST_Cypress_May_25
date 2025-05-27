@@ -10,7 +10,7 @@ const Add = require("./add"); // commonjs
 //   expect(result).toBe(50);
 // });
 // fdescribe , fit , xdescribe , xit
-describe("Test suite for addition test cases", () => {
+xdescribe("Test suite for addition test cases", () => {
   it("tests addition of two numbers", () => {
     // Arrange
     let result = null;
