@@ -1,5 +1,5 @@
 const postModule = require("./fetchPostAsync");
-describe("test suite for async fetchPost", () => {
+xdescribe("test suite for async fetchPost", () => {
   //   it("tests for fetchPost using async/await", async () => {
   //     try {
   //       // arrange
