@@ -1,4 +1,25 @@
-xdescribe("a suite for using setup and teardown methods", () => {
+beforeAll(() => {
+  console.log(
+    "This runs once before all tests in this suite - Outside describe block",
+  );
+});
+afterAll(() => {
+  console.log(
+    "This runs once after all tests in this suite - Outside describe block",
+  );
+});
+beforeEach(() => {
+  console.log(
+    "This runs before each test in this suite - Outside describe block",
+  );
+});
+afterEach(() => {
+  console.log(
+    "This runs after each test in this suite - Outside describe block",
+  );
+});
+
+describe("a suite for using setup and teardown methods", () => {
   beforeAll(() => {
     console.log("This runs once before all tests in this suite");
   });
@@ -22,13 +43,18 @@ xdescribe("a suite for using setup and teardown methods", () => {
   });
 });
 
-describe("a suite for using setup and teardown methods with async", () => {
+xdescribe("a suite for using setup and teardown methods with async", () => {
+  let cars;
+  beforeEach(() => {
+    cars = ["BMW", "Audi", "Mercedes"];
+  });
+  afterEach(() => {
+    cars = null;
+  });
   it("tests for length of cars", () => {
-    let cars = ["BMW", "Audi", "Mercedes"];
     expect(cars.length).toBe(3);
   });
   it("tests for BMW as an item in  cars", () => {
-    let cars = ["BMW", "Audi", "Mercedes"];
     expect(cars).toContain("BMW");
   });
 });
