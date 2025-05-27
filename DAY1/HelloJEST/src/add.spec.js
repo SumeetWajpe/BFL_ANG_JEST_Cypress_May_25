@@ -1,4 +1,4 @@
-const Add = require("./add");
+const Add = require("./add"); // commonjs
 // JEST test method
 // test("Test case for addition", function () {
 //   // Arrange
@@ -9,7 +9,7 @@ const Add = require("./add");
 //   // Assert
 //   expect(result).toBe(50);
 // });
-
+// fdescribe , fit , xdescribe , xit
 describe("Test suite for addition test cases", () => {
   it("tests addition of two numbers", () => {
     // Arrange
@@ -26,5 +26,11 @@ describe("Test suite for addition test cases", () => {
     result = Add("Hello", "JEST");
     // Assert
     expect(result).toBe("HelloJEST");
+  });
+});
+
+describe("Test suite for sample test", () => {
+  it("sample test", () => {
+    expect(true).toBe(true);
   });
 });
