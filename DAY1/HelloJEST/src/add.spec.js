@@ -29,7 +29,7 @@ xdescribe("Test suite for addition test cases", () => {
   });
 });
 
-describe("Test suite for sample test", () => {
+xdescribe("Test suite for sample test", () => {
   it("sample test", () => {
     expect(true).toBe(true);
   });
