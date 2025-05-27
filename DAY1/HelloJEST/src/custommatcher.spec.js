@@ -17,8 +17,8 @@ expect.extend({
   },
 });
 
-describe("test suite for using custom matcher", () => {
-  fit("tests for toBeWithinARange matcher", () => {
+xdescribe("test suite for using custom matcher", () => {
+  it("tests for toBeWithinARange matcher", () => {
     // expect(10).toBeWithinARange(5, 15); // passes
     // expect(10).toBeWithinARange(12, 15); // fails
     // expect(10).not.toBeWithinARange(20, 60); // passes
@@ -28,3 +28,6 @@ describe("test suite for using custom matcher", () => {
     });
   });
 });
+
+// write a custom matcher to check if a number is even
+// fail the test if the type is not a number
