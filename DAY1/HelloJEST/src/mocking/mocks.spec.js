@@ -1,6 +1,6 @@
 xdescribe("a suite for mocking", () => {
   it("tests for a mock function", () => {
-    const mockFun = jest.fn();
+    const mockFun = jest.fn(); // create a mock function with JEST
 
     let result = mockFun(10);
     // expect(result).toBeUndefined();
