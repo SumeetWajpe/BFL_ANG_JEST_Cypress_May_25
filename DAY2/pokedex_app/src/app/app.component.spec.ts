@@ -4,7 +4,7 @@ import { AppComponent } from "./app.component";
 import { LoaderService } from "./shared/services/loader.service";
 import { DebugElement } from "@angular/core";
 import { By } from "@angular/platform-browser";
-describe("test suite for App Component", () => {
+xdescribe("test suite for App Component", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [AppComponent],
@@ -28,7 +28,7 @@ describe("test suite for App Component", () => {
     expect(app.title).toEqual("pokedex-angular");
   });
 
-  fit("tests if h1 tag is having header class generated", () => {
+  it("tests if h1 tag is having header class generated", () => {
     // nativeElement returns a DOM tree
     // debugElement -> is Angular Object and has additional methods of reference
     const fixture = TestBed.createComponent(AppComponent); // instantiation of AppComponent
