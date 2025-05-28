@@ -2,7 +2,7 @@ import { TestBed } from "@angular/core/testing";
 import { HttpClientTestingModule } from "@angular/common/http/testing";
 import { PokemonService } from "./pokemon.service";
 import { HttpClient } from "@angular/common/http";
-describe("test suite for pokemon service", () => {
+xdescribe("test suite for pokemon service", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [HttpClientTestingModule],

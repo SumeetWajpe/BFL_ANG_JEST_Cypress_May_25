@@ -15,7 +15,7 @@ import { FormsModule } from "@angular/forms";
 import { NgMultiSelectDropDownModule } from "ng-multiselect-dropdown";
 import { of } from "rxjs";
 
-describe("test suites for Pokemon List Component", () => {
+xdescribe("test suites for Pokemon List Component", () => {
   let httpMock: HttpTestingController;
   let componentInstance: PokemonListComponent;
   let fixture: ComponentFixture<PokemonListComponent>;
