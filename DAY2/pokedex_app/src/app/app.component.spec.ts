@@ -3,6 +3,7 @@ import { RouterTestingModule } from "@angular/router/testing";
 import { AppComponent } from "./app.component";
 import { LoaderService } from "./shared/services/loader.service";
 import { DebugElement } from "@angular/core";
+import { By } from "@angular/platform-browser";
 describe("test suite for App Component", () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
@@ -32,7 +33,11 @@ describe("test suite for App Component", () => {
     // debugElement -> is Angular Object and has additional methods of reference
     const fixture = TestBed.createComponent(AppComponent); // instantiation of AppComponent
     const el: DebugElement = fixture.debugElement;
-    const h1 = el.nativeElement.querySelector("h1.header");
+    // const h1 = el.nativeElement.querySelector("h1.header");
+    // expect(h1).toBeTruthy();
+    // OR - using debugElement
+    // uses browser - specific API
+    const h1 = el.query(By.css(".header"));
     expect(h1).toBeTruthy();
   });
 });
