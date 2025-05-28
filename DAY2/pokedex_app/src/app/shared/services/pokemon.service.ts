@@ -44,6 +44,7 @@ export class PokemonService {
 
   //API call to get Pokemon data
   getPokemonData(params?: any): Observable<any> {
+    console.log(this.rootURL + params);
     return this.httpClient
       .get(this.rootURL + params)
       .pipe(retry(1), catchError(this.handleError));
