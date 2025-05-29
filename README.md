@@ -9,3 +9,7 @@ describe("",()=>{
         expect(true).toBe(true);
     });
 })
+
+# Lambda test url
+
+https://ecommerce-playground.lambdatest.io/index.php

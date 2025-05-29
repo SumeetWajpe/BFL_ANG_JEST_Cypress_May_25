@@ -5,7 +5,7 @@ describe("test suite for podedex app", () => {
     cy.wait(20000);
 
     cy.get("#search_pokemon").type("bu");
-    cy.wait(2000);
+    cy.wait(5000);
     // get will select the element (selector)
     // cy.get(".pokemon-content").should("have.length", 2);
 
@@ -15,5 +15,13 @@ describe("test suite for podedex app", () => {
     //   .should("have.length", 2);
 
     cy.get("app-pokemon-item").find(".pokemon-content").first().click();
+  
+
+    // for asserting the URL
+    // cy.url().should(
+    //   "eq",
+    //   "https://ecommerce-playground.lambdatest.io/index.php?route=account/account",
+    // );
+  
   });
 });
