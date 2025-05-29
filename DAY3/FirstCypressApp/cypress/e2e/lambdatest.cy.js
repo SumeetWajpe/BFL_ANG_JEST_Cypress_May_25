@@ -32,19 +32,23 @@ describe("test suite for lambdatest.io ", function () {
   //       );
   //     });
   //   });
-  it("should login successfully but using fixtures", function () {
-    cy.visit(
-      "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
-    );
+//   it("should login successfully but using fixtures", function () {
+//     cy.visit(
+//       "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
+//     );
 
-    // console.log(this.loginData);
-    //fetching data from fixtures fetch in before -> beforeAll
-    cy.get("#input-email").type(this.loginData.email);
-    cy.get("#input-password").type(this.loginData.pwd);
-    cy.get("form > .btn").click();
-    cy.url().should(
-      "eq",
-      "https://ecommerce-playground.lambdatest.io/index.php?route=account/account",
-    );
-  });
+//     // console.log(this.loginData);
+//     //fetching data from fixtures fetch in before -> beforeAll
+//     cy.get("#input-email").type(this.loginData.email);
+//     cy.get("#input-password").type(this.loginData.pwd);
+//     cy.get("form > .btn").click();
+//     cy.url().should(
+//       "eq",
+//       "https://ecommerce-playground.lambdatest.io/index.php?route=account/account",
+//     );
+//   });
+
+it("use Login Page object for reuable biz Logic",()=>{
+    
+})
 });
