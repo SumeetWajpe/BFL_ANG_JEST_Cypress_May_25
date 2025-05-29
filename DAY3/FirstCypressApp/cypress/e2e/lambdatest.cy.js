@@ -50,11 +50,11 @@ describe("test suite for lambdatest.io ", function () {
   //     );
   //   });
 
-  it("use Login Page object for reuable biz Logic", () => {
+  it("use Login Page object for reuable biz Logic", function () {
     cy.visit(
       "https://ecommerce-playground.lambdatest.io/index.php?route=account/login",
     );
-    loginPage.login();
+    loginPage.login(this.loginData.email, this.loginData.pwd);
     cy.url().should(
       "eq",
       "https://ecommerce-playground.lambdatest.io/index.php?route=account/account",
