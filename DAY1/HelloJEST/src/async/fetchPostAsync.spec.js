@@ -35,7 +35,7 @@ xdescribe("test suite for async fetchPost", () => {
       expect(post).toEqual(mockResult);
     });
   });
-  fit("tests for fetchPostToReturnAPromise using promise",  () => {
+  fit("tests for fetchPostToReturnAPromise using promise", () => {
     //     return expect(
     //       postModule.fetchPostToReturnAPromise(1),
     //     ).resolves.toBeDefined(); // resolves is a Jest matcher that waits for the promise to resolve
